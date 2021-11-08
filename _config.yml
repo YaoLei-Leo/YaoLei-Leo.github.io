@@ -1,4 +1,6 @@
+#Jekyll configuration
+name: YaoLei-Leo's github page
+description:
+url: https://yaolei-leo.github.io/
 markdown: kramdown
-kramdown:
-    input: GFM
 highlighter: rouge
