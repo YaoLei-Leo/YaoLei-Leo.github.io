@@ -1,91 +1,104 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: "Lato", sans-serif;
+  background-color: #F8F9F9;
 }
 
-.avatar {
-  position: fixed;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5DADE2;
 }
 
-.sidenav {
-  width: 150px;
-  position: fixed;
-  z-index: 1;
-  top: 190px;
-  background: #eee;
-  overflow-x: hidden;
+li {
+  display: inline;
+  float: left;
 }
 
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #2196F3;
-  display: block;
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
-.sidenav a:hover {
-  color: #064579;
+li a:hover:not(.active) {
+  background-color: #A3E4D7;
 }
+
+.active {
+  background-color: #52BE80 ;
+}
+
 
 .main {
-  margin-left: 170px; /* Same width as the sidebar + left position in px */
   font-size: 25px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+table, th, td {
+  border: 1px solid black;
+  text-align: left;
 }
+
+th, td {
+  padding: 6px
+}
+
+td.Years {
+  width: 18%;
+}
+
+#related_courses {
+  font-size: 16px;
+}
+
 </style>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 
 </head>
 <body>
 
-<div class="avatar">
-   <a href="index.html">
-   <img src="Avatar.png" alt="Avatar" width="150" height="150">
-   </a>
-</div>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="experience.html">Experience</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="posts.html">Posts</a></li>
+  <li><a href="publications.html">Publications</a></li>
+  <li><a href="contacts.html">Contacts</a></li>
+</ul>
 
-<div class="sidenav">
-  <a href="index.html">Home</a>
-  <a href="experience.html">Experience</a>
-  <a href="projects.html">Projects</a>
-  <a href="publications.html">Publications</a>
-  <a href="contacts.html">Contacts</a>
-</div>
-
-<div class="main">
-  <h2>Experience</h2>
+<div class="main" style="overflow-x:auto;">
+<h2>Experience</h2>
   <table>
-    <thead>
     <tr>
-    <th>Years</th>
-    <th>Experience</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>2019-now</td>
-    <td><strong>M.Phil. in Bioinformatics, LKS Faculty of Medicine, The University of Hong Kong, Hong Kong China.</strong> <br> Related Courses: Practical Bioinformatics, Introduction to Biostatistics, Advanced Statistical Methods.</td>
+	  <th>Years</th>
+	  <th>Experience</th>
     </tr>
     <tr>
-    <td>2015-2019</td>
-    <td><strong>B.S. in Biotechnology, College of Life Sciences, Nankai University, Tianjin, China.</strong> <br> Related Courses: Computational Thinking and Advanced Information Technology (4.0/4.0), Genetics (3.3/4.0), Cell Engineering (4.0/4.0), Neurobiology (3.7/4.0).</td>
+      <td class="Years">2019-now</td>
+      <td>
+		<strong style="line-height:1.2;">M.Phil. in Bioinformatics, LKS Faculty of Medicine, The University of Hong Kong, Hong Kong China.</strong> <br>
+		<p id="related_courses">Related Courses: Practical Bioinformatics, Introduction to Biostatistics, Advanced Statistical Methods.</p>
+	  </td>
     </tr>
-    </tbody>
-    </table>
+    <tr>
+      <td class="Years">2015-2019</td>
+      <td>
+	    <strong style="line-height:1.2;">B.S. in Biotechnology, College of Life Sciences, Nankai University, Tianjin, China.</strong> <br>
+	    <p id="related_courses">Related Courses: Computational Thinking and Advanced Information Technology (4.0/4.0), Genetics (3.3/4.0), Cell Engineering (4.0/4.0), Neurobiology (3.7/4.0).</p>
+	  </td>
+    </tr>
+
+  </table>
 </div>
 
-  
 </body>
 </html>
