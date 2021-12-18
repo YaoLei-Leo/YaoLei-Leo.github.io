@@ -4,40 +4,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  font-family: "Lato", sans-serif;
-  background-color: #F8F9F9;
-}
-
-ul {
-  border-radius: 10px;
-  list-style-type: none;
+  font-family: monospace;
+  font-size: 22px;
+  background-color: #e9e0d6;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #5DADE2;
 }
 
-li {
+.header{
+  background-color: #354458;
+  padding: 10px 0px;
+}
+
+.header > ul {
+  list-style-type: none;
+  border-style: none;
+  overflow: hidden;
+  margin: 0;
+}
+
+.header ul > img {
   display: inline;
   float: left;
+  margin-left: -3px;
 }
 
-li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+.header ul > li {
+  display: inline;
+  float: right;
 }
 
-li a:hover:not(.active) {
-  background-color: #A3E4D7;
+.header ul li > a {
+  display: block;
+  color: rgb(206, 206, 206);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  margin-right: 10px;
+  text-decoration: none;
 }
 
-.active {
-  background-color: #52BE80 ;
+.header ul li > a:hover {
+  color: #006eff;
 }
-
 
 .main {
   font-size: 25px; /* Increased text to enable scrolling */
@@ -67,14 +77,17 @@ td.Years {
 </head>
 <body>
 
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a class="active" href="experience.html">Experience</a></li>
-  <li><a href="projects.html">Projects</a></li>
-  <li><a href="posts.html">Posts</a></li>
-  <li><a href="publications.html">Publications</a></li>
-  <li><a href="contacts.html">Contacts</a></li>
-</ul>
+  <div class="header">
+    <ul>
+      <img src="images/einstein.png" width="55" height="55">
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="posts.html">Posts</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </div>
 
 <div class="main" style="overflow-x:auto;">
 <h2>Experience</h2>
